@@ -7258,7 +7258,7 @@ void set_Hardware_version(unsigned int value)
 
 #ifndef DISABLE_TEMP_PROTECT
             if(diff.tv_sec > 120 || dev->temp_top1[TEMP_POS_LOCAL] > MAX_PCB_TEMP // we use pcb temp to check protect or not
-               || cur_fan_num < MIN_FAN_NUM /*|| dev->fan_speed_top1 < (MAX_FAN_SPEED * dev->fan_pwm / 150) */ )
+               /*|| cur_fan_num < MIN_FAN_NUM || dev->fan_speed_top1 < (MAX_FAN_SPEED * dev->fan_pwm / 150) */ )
             {
                 fatal_error_counter++;
 
